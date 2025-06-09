@@ -37,12 +37,17 @@
 }
 
 /* BASE */
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-dark);
   font-family: poppins, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 address {
   font-style: normal;
@@ -57,10 +62,32 @@ h1 {
 }
 h1 span {
   color: var(--color-brand);
-
-  /* BUTTON */
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0;
+}
+
+/* SECTION */
+.section {
+  padding: 48px 0;
+  margin-bottom: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* BUTTON */
 .button {
+  padding: 16px 32px;
   color: var(--color-white);
   background-color: var(--color-brand);
   border: 2px solid var(--color-brand);
@@ -94,6 +121,10 @@ h1 span {
   font-family: poppins, sans-serif;
   font-weight: 900;
   text-align: center;
+  padding: 272px 0;
+}
+.hero-section {
+  padding: 272px 0;
 }
 
 /* ADVANTAGES SECTION */
@@ -126,11 +157,18 @@ h1 span {
   color: var(--color-brand);
   font-weight: 600;
 }
+.tradition-section {
+  padding-top: 96px;
+}
+.traditions-title {
+  margin-bottom: 42px;
+}
 
 /* KUHARI SECTION */
 .kuhari-title {
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 16px;
 }
 
 /* FORMATY SECTION */
@@ -142,6 +180,12 @@ h1 span {
 .format-text {
   font-size: 14px;
   font-weight: 300;
+}
+
+/* CONTACTS SECTION */
+
+.contact-title {
+  margin-bottom: 16px;
 }
 
 /* FOOTER */
