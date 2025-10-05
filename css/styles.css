@@ -34,6 +34,8 @@
   --color-white: #faf4ea;
   --color-brand: #819b57;
   --color-brand-dark: #465929;
+  --color-line: #cfcfbc;
+  --color-secondary: #a18268;
 }
 
 /* BASE */
@@ -48,7 +50,9 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
+  background-color: var(--color-white);
 }
+
 address {
   font-style: normal;
 }
@@ -139,15 +143,22 @@ p {
 }
 
 /* Hero section */
+
+.hero-section {
+  padding: 272px 0;
+  margin-bottom: 0;
+  background-image: url(../images/hero-back.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  max-height: 790px;
+}
+
 .hero-title {
   color: var(--color-white);
   font-family: poppins, sans-serif;
   font-weight: 900;
   text-align: center;
-  padding: 272px 0;
-}
-.hero-section {
-  padding: 272px 0;
 }
 
 /* ADVANTAGES SECTION */
@@ -174,6 +185,10 @@ p {
 }
 .section-title .accent {
   color: var(--color-brand-dark);
+}
+
+.section-title.center {
+  text-align: center;
 }
 
 /* TRADITIONS SECTIOn */
@@ -207,7 +222,21 @@ p {
 }
 
 /* KUHARI SECTION */
-.kuhari-title {
+.kuhari-title::before,
+.kuhari-title::after {
+  content: '';
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-line);
+}
+
+.kuhari-img {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-white),
+    -16px 16px 0 2px var(--color-secondary);
+}
+
+.kuhari-names {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -222,7 +251,6 @@ p {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-white);
-  background-color: #a18268;
 }
 .format-text {
   font-size: 14px;
@@ -230,9 +258,18 @@ p {
 }
 
 .format-card {
+  height: 444px;
+  width: 349px;
   border: 1px solid lightgrey;
   border-radius: 16px;
   padding: 24px;
+  flex-basis: 350px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
 }
 
 /* CONTACTS SECTION */
@@ -255,4 +292,11 @@ p {
 .address-copyright {
   font-size: 14px;
   color: #a18268;
+}
+.footer {
+  background-color: #31261a;
+  background-image: url(../images/footer-backgr.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
